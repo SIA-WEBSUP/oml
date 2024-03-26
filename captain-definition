@@ -1,3 +1,4 @@
+# Simplest captain-definition possible
 {
   "schemaVersion": 2,
   "templateId": "node/8.7.0"
