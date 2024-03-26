@@ -1,0 +1,55 @@
+# # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+# name: Node.js CI
+
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+
+# jobs:
+#   build:
+
+#     runs-on: ubuntu-latest
+
+#     strategy:
+#       matrix:
+#         node-version: [20.x]
+#         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+#     steps:
+#     - uses: actions/checkout@v3
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: ${{ matrix.node-version }}
+#         cache: 'npm'
+#     - name: Create env file
+#       run: |
+#         touch .env
+#         echo REACT_APP_JSON_URL="https://data.aa-intergroup.org/6436f5a3f03fdecef8459055.json" >> .env
+#         echo REACT_APP_BASE_URL="/meetings" >> .env
+#         echo REACT_APP_COLOR_MODE="light"; >> .env          
+#         cat .env
+#     - run: npm ci
+#     - run: npm run build
+
+#     - name: Deploy to Server
+#       uses: appleboy/ssh-action@master
+#       with:
+#         host: ${{ secrets.SERVER_HOST }}
+#         username: ${{ secrets.SERVER_USERNAME }}
+#         password: ${{ secrets.SERVER_PASSWORD }} 
+#         # script: |
+#         #   whoami
+#         #   ls -al
+#         script: |
+#           cd ~/development/c4r
+#           # Ensure the directory exists and permissions are set correctly
+#           mkdir -p oml
+#           # Remove previous build files if necessary
+#           rm -rf oml/*
+#           # Upload the build files
+#           scp -r $GITHUB_WORKSPACE/* ~/development/c4r/oml
