@@ -1,0 +1,2 @@
+#root,body,html{height:100%}body{background-color:var(--chakra-colors-gray-50)!important}body.chakra-ui-dark{background-color:var(--chakra-colors-gray-700)!important}#root .chakra-text a{border-bottom:1px solid var(--chakra-colors-blue-500)!important;color:var(--chakra-colors-blue-500)!important}html[dir=rtl] #root .chakra-text a{direction:ltr;unicode-bidi:embed}#root .chakra-text a:hover{border-bottom:1px solid var(--chakra-colors-blue-600)!important;color:var(--chakra-colors-blue-600)!important}
+/*# sourceMappingURL=main.ede1ace3.css.map*/

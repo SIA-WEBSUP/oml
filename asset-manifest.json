@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/oml/static/css/main.ede1ace3.css",
+    "main.js": "/oml/static/js/main.f21b33b4.js",
+    "index.html": "/oml/index.html",
+    "main.ede1ace3.css.map": "/oml/static/css/main.ede1ace3.css.map",
+    "main.f21b33b4.js.map": "/oml/static/js/main.f21b33b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ede1ace3.css",
+    "static/js/main.f21b33b4.js"
+  ]
+}
