@@ -2,7 +2,6 @@
   "name": "online-meeting-list",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://sia-websup.github.com/oml",
   "dependencies": {
     "@chakra-ui/react": "^2.6.1",
     "@code4recovery/spec": "^1.1.4",
